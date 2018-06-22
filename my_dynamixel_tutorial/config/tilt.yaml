@@ -1,0 +1,91 @@
+l_thigh_pitch_joint_position_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: l_thigh_pitch_joint
+    joint_speed: 1.15
+    motor:
+        id: 1
+        init: 2710
+        min: 2000
+        max: 3350
+        
+l_tibia_joint_position_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: l_tibia_joint
+    joint_speed: 1.15
+    motor:
+        id: 2
+        init: 905
+        min: 710 ##911
+        max: 2000
+        
+l_ankle_joint_position_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: l_ankle_joint
+    joint_speed: 1.15
+    motor:
+        id: 3
+        init: 1260
+        min: 240
+        max: 2300
+
+r_thigh_pitch_joint_position_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: r_thigh_pitch_joint
+    joint_speed: 1.15
+    motor:
+        id: 11
+        init: 3935
+        min: 540
+        max: 4020
+        
+r_tibia_joint_position_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: r_tibia_joint
+    joint_speed: 1.15
+    motor:
+        id: 12
+        init: 1850
+        min: 900
+        max: 1900
+        
+r_ankle_joint_position_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: r_ankle_joint
+    joint_speed: 1.15
+    motor:
+        id: 13
+        init: 2380
+        min: 1400
+        max: 3300
+
+
+tilt_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: tilt_joint
+    joint_speed: 1.17
+    motor:
+        id: 2
+        init: 773
+        min: 380
+        max: 2100

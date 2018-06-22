@@ -1,0 +1,24 @@
+<launch>
+<!-- Start tilt joint controller -->
+    <rosparam file="$(find my_dynamixel_tutorial)/config/tilt.yaml" command="load"/>
+    <node name="controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
+          args="--manager=dxl_manager
+                --port pan_tilt_port
+                l_thigh_pitch_joint_position_controller                       
+                l_tibia_joint_position_controller
+                l_ankle_joint_position_controller
+                "
+          output="screen"/>
+          
+  <!-- Start joints trajectory controller controller -->
+    <rosparam file="$(find my_dynamixel_tutorial)/config/joints_trajectory_controller.yaml" command="load"/>
+    <node name="controller_spawner_meta" pkg="dynamixel_controllers" type="controller_spawner.py"
+          args="--manager=dxl_manager
+                --type=meta
+                l_leg_controller
+                l_thigh_pitch_joint_position_controller
+                l_tibia_joint_position_controller
+                l_ankle_joint_position_controller
+               "
+          output="screen"/>
+</launch>

@@ -142,7 +142,7 @@ if __name__ == "__main__":
     thigh_angles = []
     tibia_angles = []
     ankle_angles = []
-    time_step = 0.018#0.009
+    time_step = 0.02#0.009
     time= np.arange(0,100,time_step)
     time_c= np.arange(1,101,time_step)
     time_a= np.arange(0.5,100.5,time_step)

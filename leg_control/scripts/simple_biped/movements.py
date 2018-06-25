@@ -188,11 +188,18 @@ if __name__ == "__main__":
 		for i,thetha in enumerate(thigh_angles):
 
 			if(tibia_angles[i]>1.2):
-				l_leg.set_angles([thigh_angles[i],tibia_angles[i],ankle_angles[i]*1.1])
+				l_leg.set_angles([thigh_angles[i],tibia_angles[i],2.1])
+				#l_leg.set_angles([thigh_angles[i],tibia_angles[i],ankle_angles[i]*1.1])
 			else:
-				l_leg.set_angles([thigh_angles[i],tibia_angles[i],1.4])
+				l_leg.set_angles([thigh_angles[i],tibia_angles[i],1.0])
 
-			r_leg.set_angles([thigh_angles_c[i],tibia_angles_c[i],ankle_angles_c[i]])
+
+			if(tibia_angles_c[i]<-1.20):
+				r_leg.set_angles([thigh_angles_c[i],tibia_angles_c[i],-2.1])
+				#l_leg.set_angles([thigh_angles[i],tibia_angles[i],ankle_angles[i]*1.1])
+			else:
+				r_leg.set_angles([thigh_angles_c[i],tibia_angles_c[i],-1.0])
+
 			count+=1
 			if count==20:
 				count=0
